@@ -3,14 +3,31 @@
 {% block content %}
 <!--    <script src=" {{ url_for('static', filename='main.js') }} "></script> -->
 
-    <h1 style="font-family: Amatic SC">So You Think You're a New Yorker?</h1>
-    <h3>{{ question }}</h3>
-    <ul>
-       <li>{{ choice1 }}</li>
-       <li>{{ choice2 }}</li>
-       <li>{{ choice3 }}</li>
-    </ul>
+    <h1 style="font-family: Poppins">So You Think You're a New Yorker?</h1>
+    <p><small>This quiz is tailored for NYC, not New York State. Questions range from fact to just plain fun.<br>
+        For entertainment purposes only. A quiz can't determine your New York worthiness... or can it?</small></p>
 
+    <h3>{{ question }}</h3>
+<!--    <ul>-->
+<!--       <li>{{ choice1 }}</li>-->
+<!--       <li>{{ choice2 }}</li>-->
+<!--       <li>{{ choice3 }}</li>-->
+<!--    </ul>-->
+
+<!-- should these be named differently? -->
+<!--URL shows answer=choice1&page=1 based on code below-->
+    <form action="">
+      <input type="radio" id="choice1" name="answer" value="choice1">
+      <label for="choice1">{{ choice1 }}</label><br>
+      <input type="radio" id="choice2" name="answer" value="choice2">
+      <label for="choice2">{{ choice2 }}</label><br>
+      <input type="radio" id="choice3" name="answer" value="choice3">
+      <label for="choice3">{{ choice3 }}</label>
+      <input type="radio" id="choice4" name="answer" value="choice4">
+      <label for="choice4">{{ choice4 }}</label>
+      <input type="hidden" id="page" name="page" value="1">
+      <button type="submit">Submit</button>
+    </form>
 
 
 
