@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        {% if title %}
+        <title>{{ title }}</title>
+        {% else %}
+        <title></title>
+        {% endif %}
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Amatic+SC" />
+
+        <style>
+            a {
+                text-decoration: underline;
+                color:black
+            }
+        </style>
+    </head>
+    <body>
+    <div class="container">
+        <div>
+            <a href="{{ url_for('index') }}">Home</a>
+        </div>
+        {% block content %}{% endblock %}
+    </div>
+    </body>
+</html>

@@ -4,23 +4,12 @@ import random
 # list of questions
 # TODO: Use random.choice to randomize the list
 #TODO: Should this be a dict so that I can attach the correct answer? How do you randomize a dict?
-questions = [
-    'placeholder question 1?',
-    'placeholder question 2?',
-    'placeholder question 3?',
-    'placeholder question 4?',
-    'placeholder question 5?',
-    'placeholder question 6?',
-    'placeholder question 7?',
-    'placeholder question 8?',
-    'placeholder question 9?',
-    'placeholder question 10?',
-    'placeholder question 11?',
-    'placeholder question 12?',
-    'placeholder question 13?',
-    'placeholder question 14?',
-    'placeholder question 15?'
-]
+questions = [{
+    'q': 'Which was never a train line?',
+    'c1': 'J',
+    'c2': 'K',
+    'c3': '9'
+}]
 
 
 
