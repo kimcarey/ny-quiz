@@ -10,13 +10,13 @@ def index():
     return render_template('index.html', title='Home', user=user)
 
 
-@app.route('/quiz') # Do I need GET or POST methods for this route?
+@app.route('/quiz')
 def quiz():
-    page = request.args.get('page', default=1, type=int) # to recall the state/what quiz # the user is on
-
+    page = request.args.get('page', default=0, type=int) # to recall the state/what quiz # the user is on
+    question_id = request.args.get('question_id', type=int) # recall what random question was given.
     questions = [
         {
-            'q': 'The ____ train has never been a NYC subway line:',
+            'q': 'Which has never been a NYC subway line?',
             'c1': 'J',
             'c2': 'K',
             'c3': '9',
@@ -37,7 +37,7 @@ def quiz():
             'c4': 'Gramercy Park Hotel'
         },
         {
-            'q': 'There are how many steps to reach the crown of the Statue of Liberty?',
+            'q': 'How many steps lead to the crown of the Statue of Liberty?',
             'c1': 'What\'s the Statue of Liberty?',
             'c2': '327',
             'c3': '973',
@@ -122,19 +122,18 @@ def quiz():
         }
     ]
 
-
-    random_q = questions[0] # TODO: Make this random for a list longer than one item
-    # random_q = random.choice(questions)
-
-
-
-    # TODO: To advance to the next page. Need to convert questions into a form that will be submitted
-    next_page = '/quiz?page=' + str(page + 1)
+    # Randomize the questions
+    # Chooses a random number between 1 and 15 and sets to random_q variable
+    question_id = random.randint(0, len(questions)-1)
+    random_q = questions[question_id]
 
 
+
+    # To advance to the next page
+    next_page = str(page)
 
     return render_template('quiz.html', title='Start Game', question=random_q['q'], choice1=random_q['c1'], choice2=random_q['c2'],
-                           choice3=random_q['c3'], choice4=random_q['c4'], page=page, next_page=next_page)
+                           choice3=random_q['c3'], choice4=random_q['c4'], page=page+1, question_id=str(question_id))
 
 
 # @app.route('/final')
