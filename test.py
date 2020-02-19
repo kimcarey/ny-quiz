@@ -5,10 +5,11 @@ import random
 app = Flask(__name__)
 
 
-# Testing a different approach by creating a Questions class
+# CLI Version that I was testing as a different approach for the quiz.
+# Created a Questions class and have all questions in a list.
 
-# @app.route('/')
-# @app.route('/index')
+@app.route('/')
+@app.route('/index')
 def index():
     user = {'username': 'Kim'}
     return render_template('index.html', title='Home', user=user)
@@ -52,15 +53,16 @@ questions = [
 ]
 
 # Randomize the questions
+# TODO: Will I have issues with duplicates? So far no problems but want to make sure same question isn't repeated
 questions_random = random.sample(questions, len(questions))
 
 
-# @app.route('/quiz-1')
+@app.route('/quiz-1')
 def run_quiz(q_list):
     score = 0
     counter = 0
 
-    # Limit to a total of 8 questions
+    # Limits quiz to a total of 8 questions
     for question in q_list:
         answer = input(question.prompt)
         if answer == question.answer:
@@ -71,6 +73,7 @@ def run_quiz(q_list):
             break
 
     # print('You got ' + str(score) + '/' + str(len(q_list) * 3) + ' points.')
+    # Ended up hard-coding total points (24)
     print('You got ' + str(score) + '/' + ' 24 points.')
 
 
@@ -83,13 +86,13 @@ def run_quiz(q_list):
     if score >= 20 and score <= 24:
         print('Start spreading the news! You\'re an official New Yorker!')
 
+    # return render_template('quiz.html', title='Start Game', question=questions_random)
 
 run_quiz(questions_random)
 
     #
     #
-    # return render_template('quiz.html', title='Start Game', question=random_q['q'], choice1=random_q['c1'], choice2=random_q['c2'],
-    #                        choice3=random_q['c3'], choice4=random_q['c4'], page=page+1, question_id=str(question_id))
+
 
 
 # @app.route('/final')
