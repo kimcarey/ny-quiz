@@ -3,26 +3,28 @@
 {% block content %}
 
     <h1 style="font-family: Poppins">So You Think You're a New Yorker?</h1>
-    <p><small>*Disclaimer: This quiz is tailored for NYC. Questions range from fact to just plain fun.<br>
-        **For entertainment purposes only -- a quiz can't determine your New York worthiness... or can it?)</small></p>
 
-    <h3>{{ question }}</h3>
+    <h3 class="subtitle">{{ question }}</h3>
 
-    <form action="">
-        <input type="radio" id="choice1" name="answer" value="c1">
-        <label for="choice1">{{ c1 }}</label><br>
-        <input type="radio" id="choice2" name="answer" value="c2">
-        <label for="choice2">{{ c2 }}</label><br>
-        <input type="radio" id="choice3" name="answer" value="c3">
-        <label for="choice3">{{ c3 }}</label><br>
-        <input type="radio" id="choice4" name="answer" value="c4">
-        <label for="choice4">{{ c4 }}</label><br>
-        <input type="hidden" id="page" name="page" value="{{ page }}">
-        <input type="hidden" id="seed" name="seed" value="{{ seed }}">
-        <input type="hidden" id="answers" name="answers" value="{{ answers }}">
-        <input type="hidden" id="question_id" name="question_id" value="{{ question_id }}">
-        <button type="submit">Submit</button>
-    </form>
+    <div class="form">
+        <form action="">
+            <input type="radio" id="choice1" name="answer" value="c1">
+            <label for="choice1">{{ c1 }}</label><br>
+            <input type="radio" id="choice2" name="answer" value="c2">
+            <label for="choice2">{{ c2 }}</label><br>
+            <input type="radio" id="choice3" name="answer" value="c3">
+            <label for="choice3">{{ c3 }}</label><br>
+            <input type="radio" id="choice4" name="answer" value="c4">
+            <label for="choice4">{{ c4 }}</label><br>
+            <input type="hidden" id="page" name="page" value="{{ page }}">
+            <input type="hidden" id="seed" name="seed" value="{{ seed }}">
+            <input type="hidden" id="answers" name="answers" value="{{ answers }}">
+            <input type="hidden" id="question_id" name="question_id" value="{{ question_id }}">
+            <div style="text-align:center">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
 
 
 {% endblock %}
