@@ -44,18 +44,18 @@ def quiz():
         {
             'q': 'Which borough is used in the moniker for the New York Yankees?',
             'c1': 'Queens',
-            'c2': 'Bronx',
-            'c3': 'Brooklyn',
+            'c2': 'Brooklyn',
+            'c3': 'Bronx',
             'c4': 'Manhattan',
-            'ans': 'c2'
+            'ans': 'c3'
         },
         {
             'q': 'What famous hotel has a secret train platform beneath it?',
-            'c1': 'Waldorf Astoria',
-            'c2': 'The Plaza',
+            'c1': 'The Plaza',
+            'c2': 'Waldorf Astoria',
             'c3': 'The Carlyle',
             'c4': 'Gramercy Park Hotel',
-            'ans': 'c1'
+            'ans': 'c2'
         },
         {
             'q': 'How many steps lead to the crown of the Statue of Liberty?',
@@ -93,7 +93,7 @@ def quiz():
             'q': 'Which acronym is relevant to New York?',
             'c1': 'LGA',
             'c2': 'BQE',
-            'c3': 'NDQ',
+            'c3': 'LIE',
             'c4': 'All of the above',
             'ans': 'c4'
         },
@@ -116,10 +116,10 @@ def quiz():
         {
             'q': 'The award for the most ethnically diverse borough goes to:',
             'c1': 'Staten Island',
-            'c2': 'Queens',
-            'c3': 'Brooklyn',
+            'c2': 'Brooklyn',
+            'c3': 'Queens',
             'c4': 'Bronx',
-            'ans': 'c2'
+            'ans': 'c3'
         },
         {
             'q': 'The RFK Bridge will forever and always be the: ',
@@ -170,7 +170,7 @@ def quiz():
         if score >= 7 and score <= 12:
             message = 'Not quite... but you\'re still better than Staten Island!'
         if score >= 13 and score <= 19:
-            message = 'You\'re getting warmer than a subway car during the morning commute!'
+            message = 'You\'re getting warmer than a subway car on your morning commute!'
         if score >= 20 and score <= 24:
             message = 'Start spreading the news... You\'re an official New Yorker!'
         return render_template('results.html', title='Results', score=score, message=message, total=3*8)
