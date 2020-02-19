@@ -1,20 +1,15 @@
 {% extends "base.html" %}
 
 {% block content %}
-<!--    <script src=" {{ url_for('static', filename='main.js') }} "></script> -->
 
     <h1 style="font-family: Poppins, sans-serif">So You Think You're a New Yorker?</h1>
     <p>So you think you're a New Yorker... </p>
-    <p>Take this quiz and find out</p>
+    <p>Take this quiz and find out.</p>
     <p>Ready?</p>
 
 
-<!--NOT WORKING. TRYING TO CREATE BUTTON THAT LINKS TO QUIZ PAGE-->
-<!--    <button type="submit" class="btn btn-default">START QUIZ</button>-->
-<!--        <a class="btn" href="{{ url_for('quiz') }}"></a>-->
 
-
-<!--THIS ONE WORKS!!-->
+<!--Button to start quiz-->
 <a href="{{ url_for('quiz') }}"><input type="button" value="START QUIZ"></a>
 
 
