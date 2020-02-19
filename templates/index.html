@@ -1,16 +1,21 @@
 {% extends "base.html" %}
 
 {% block content %}
+<div class="card">
+    <div class="card-image" style="background-image: url(https://media.architecturaldigest.com/photos/5da74823d599ec0008227ea8/master/pass/GettyImages-946087016.jpg)"></div>
+    <div class="card-content">
+        <h1 style="font-family: Poppins, sans-serif">So You Think You're a New Yorker?</h1>
+        <h3>Take this quiz and find out. Ready?</h3>
+        <!--Button to start quiz-->
+    <div style="text-align:center">
+        <a href="{{ url_for('quiz') }}"><input type="button" value="START QUIZ"></a>
+    </div>
+    </div>
+</div>
 
-    <h1 style="font-family: Poppins, sans-serif">So You Think You're a New Yorker?</h1>
-    <p>So you think you're a New Yorker... </p>
-    <p>Take this quiz and find out.</p>
-    <p>Ready?</p>
 
-
-
-<!--Button to start quiz-->
-<a href="{{ url_for('quiz') }}"><input type="button" value="START QUIZ"></a>
+<p><small>*Disclaimer: This quiz is tailored for NYC. Questions range from fact to just plain fun.<br>
+    **For entertainment purposes only -- a quiz can't determine your New York worthiness... <i>or can it?</i>)</small></p>
 
 
 {% endblock %}
