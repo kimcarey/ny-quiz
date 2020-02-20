@@ -2,7 +2,8 @@
 
 {% block content %}
 <div class="card">
-    <div class="card-image" style="background-image: url(https://media.architecturaldigest.com/photos/5da74823d599ec0008227ea8/master/pass/GettyImages-946087016.jpg)"></div>
+    <div class="card-image" style="background-image: url({{ url_for('static', filename='city_image.jpg') }});">
+    </div>
     <div class="card-content">
         <h1 style="font-family: Poppins, sans-serif">So You Think You're a New Yorker?</h1>
         <h3>Take this quiz and find out. Ready?</h3>
