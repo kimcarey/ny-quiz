@@ -12,5 +12,5 @@ This was a huge learning experience. I ran into a couple of challenges along the
  Project Challenges: 
 * Have a total of 15 questions, but only deliver 8: I used an if statement to achieve this
 * Those 8 questions needed to be randomized and must not repeat: I ended up using random.seed() for a pseudo random number generator
-* Needed to the program to remember the state as the user progressed from one page to the next: random.seed() was also used for this
+* Needed the program to remember the state as the user progressed from one page to the next: random.seed() was also used for this
 
