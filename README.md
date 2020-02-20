@@ -14,3 +14,6 @@ This was a huge learning experience. I ran into a couple of challenges along the
 * Those 8 questions needed to be randomized and must not repeat: I ended up using random.seed() for a pseudo random number generator
 * Needed the program to remember the state as the user progressed from one page to the next: random.seed() was also used for this
 
+Future To-Dos:
+* Need to add an answer key
+
